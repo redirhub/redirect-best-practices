@@ -30,9 +30,9 @@ Not all redirects are created equal. Picking the wrong one can cost you rankings
 
 ### Key Resources
 
-- **Google Search Central — [Redirects and Google Search](https://developers.google.com/search/docs/crawling-indexing/301-redirects):** The definitive guide on how Google interprets each redirect type. Covers server-side redirects, meta refresh, JavaScript redirects, and crypto redirects with implementation examples for Apache, Nginx, and PHP.
-- **MDN Web Docs — [Redirections in HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Redirections):** A complete reference for HTTP redirect status codes. Covers permanent, temporary, and special redirects, plus HTML meta refresh and JavaScript alternatives, with clear precedence rules.
-- **Ahrefs — [11 Types of Redirects & Their SEO Impact](https://ahrefs.com/blog/redirects-for-seo/):** Practical breakdown of every redirect type with real examples. Explains how Google treats each one for canonicalization and links, plus how to verify Google is honoring your redirects in Search Console.
+- **Google Search Central: [Redirects and Google Search](https://developers.google.com/search/docs/crawling-indexing/301-redirects):** The definitive guide on how Google interprets each redirect type. Covers server-side redirects, meta refresh, JavaScript redirects, and crypto redirects with implementation examples for Apache, Nginx, and PHP.
+- **MDN Web Docs: [Redirections in HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Redirections):** A complete reference for HTTP redirect status codes. Covers permanent, temporary, and special redirects, plus HTML meta refresh and JavaScript alternatives, with clear precedence rules.
+- **Ahrefs: [11 Types of Redirects & Their SEO Impact](https://ahrefs.com/blog/redirects-for-seo/):** Practical breakdown of every redirect type with real examples. Explains how Google treats each one for canonicalization and links, plus how to verify Google is honoring your redirects in Search Console.
 
 ### The Rule of Thumb
 
@@ -57,7 +57,7 @@ Every old URL should map to the closest equivalent on the new site. Redirecting 
 
 A redirect chain happens when URL A goes to B, B goes to C, and C goes to D. Each hop adds latency and dilutes link equity. Google recommends keeping it to one hop.
 
-- **Google Lighthouse — [Avoid multiple page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects):** Explains why chains hurt Core Web Vitals and how Lighthouse flags pages with two or more redirects. Includes stack-specific guidance for Drupal and React Router.
+- **Google Lighthouse: [Avoid multiple page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects):** Explains why chains hurt Core Web Vitals and how Lighthouse flags pages with two or more redirects. Includes stack-specific guidance for Drupal and React Router.
 
 Fix chains by updating your redirect map to point old URLs directly to the final destination.
 
@@ -75,9 +75,9 @@ Keep an eye on the Index Coverage report for spikes in 404s, soft 404s, or redir
 
 ### Key Resources
 
-- **Google Search Central — [Redirects and Google Search](https://developers.google.com/search/docs/crawling-indexing/301-redirects):** The canonical reference for how Google processes redirects. Explains permanent vs temporary, server-side vs client-side, and how each redirect type affects indexing and canonicalization.
-- **Ahrefs — [11 Types of Redirects & Their SEO Impact](https://ahrefs.com/blog/redirects-for-seo/):** Covers how to verify Google is consolidating link signals correctly using Search Console's external links report, plus a diagnostic method for detecting when redirects are treated as soft 404s.
-- **RedirHub — [Migration Checklists](https://github.com/redirhub/migration-checklists):** Step-by-step checklists for domain migrations, platform rebrands, HTTPS migrations, and M&A scenarios. Covers pre-launch planning, redirect mapping, and post-launch monitoring.
+- **Google Search Central: [Redirects and Google Search](https://developers.google.com/search/docs/crawling-indexing/301-redirects):** The canonical reference for how Google processes redirects. Explains permanent vs temporary, server-side vs client-side, and how each redirect type affects indexing and canonicalization.
+- **Ahrefs: [11 Types of Redirects & Their SEO Impact](https://ahrefs.com/blog/redirects-for-seo/):** Covers how to verify Google is consolidating link signals correctly using Search Console's external links report, plus a diagnostic method for detecting when redirects are treated as soft 404s.
+- **RedirHub: [Migration Checklists](https://github.com/redirhub/migration-checklists):** Step-by-step checklists for domain migrations, platform rebrands, HTTPS migrations, and M&A scenarios. Covers pre-launch planning, redirect mapping, and post-launch monitoring.
 
 ---
 
@@ -98,9 +98,9 @@ The fastest redirect is the one that never reaches your origin server. Processin
 
 ### Key Resources
 
-- **Chrome for Developers — [Avoid multiple page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects):** Covers the performance cost of redirect chains and how Lighthouse measures them. Shows how each redirect adds a full network round trip for resources in the critical rendering path.
-- **Cloudflare — [URL Forwarding](https://developers.cloudflare.com/rules/url-forwarding/) docs:** How to configure redirects at the edge using Bulk Redirects, Single Redirects, and Page Rules. Edge redirects avoid origin hits entirely.
-- **Fastly — [Redirects at the Edge](https://docs.fastly.com/en/guides/redirects):** Setting up redirect logic in VCL at the CDN layer for zero-latency redirects.
+- **Chrome for Developers: [Avoid multiple page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects):** Covers the performance cost of redirect chains and how Lighthouse measures them. Shows how each redirect adds a full network round trip for resources in the critical rendering path.
+- **Cloudflare: [URL Forwarding](https://developers.cloudflare.com/rules/url-forwarding/) docs:** How to configure redirects at the edge using Bulk Redirects, Single Redirects, and Page Rules. Edge redirects avoid origin hits entirely.
+- **Fastly: [Redirects at the Edge](https://docs.fastly.com/en/guides/redirects):** Setting up redirect logic in VCL at the CDN layer for zero-latency redirects.
 
 ### Reduce Redirects in the Critical Path
 
@@ -130,8 +130,8 @@ A user sees `yoursite.com` in the link and trusts it, but lands on `evil-site.co
 
 ### Key Resources
 
-- **OWASP — [Unvalidated Redirects and Forwards Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html):** The definitive security reference. Covers dangerous patterns in Java, PHP, ASP.NET, Rails, and Rust, plus detailed prevention strategies including URL validation, token-based redirect mapping, and interstitial pages.
-- **OWASP — [Server-Side Request Forgery Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html):** URL validation techniques that apply to redirect security. Covers DNS resolution checks, allowlist approaches, and network-layer controls.
+- **OWASP: [Unvalidated Redirects and Forwards Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html):** The definitive security reference. Covers dangerous patterns in Java, PHP, ASP.NET, Rails, and Rust, plus detailed prevention strategies including URL validation, token-based redirect mapping, and interstitial pages.
+- **OWASP: [Server-Side Request Forgery Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html):** URL validation techniques that apply to redirect security. Covers DNS resolution checks, allowlist approaches, and network-layer controls.
 
 ---
 
@@ -154,7 +154,7 @@ Setting up redirects is half the work. Verifying they work correctly is the othe
 - **`curl -I -L`**: Quick command-line verification. Add `-o /dev/null -w "%{url_effective}\n"` to see the final destination.
 - **Screaming Frog SEO Spider**: Desktop crawler with redirect chain visualization. Free for up to 500 URLs.
 - **Lighthouse / PageSpeed Insights**: Flags multiple redirect chains affecting performance.
-- **Google Search Console — URL Inspection**: Check how Google is processing individual URLs after a migration.
+- **Google Search Console: URL Inspection**: Check how Google is processing individual URLs after a migration.
 - **whatsmydns.net**: Verify DNS propagation when changing domains or CDN providers.
 
 ### Monitoring After Migration
@@ -166,9 +166,9 @@ Setting up redirects is half the work. Verifying they work correctly is the othe
 
 ### Key Resources
 
-- **Google Search Central — [Redirects and Google Search](https://developers.google.com/search/docs/crawling-indexing/301-redirects):** Implementation examples for Apache, Nginx, and PHP. Explains how different redirect methods affect Google's processing.
-- **Chrome for Developers — [Avoid multiple page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects):** Performance testing methodology for redirect chains and stack-specific fixes.
-- **RedirHub — [Migration Checklists](https://github.com/redirhub/migration-checklists):** Testing checklists with URL inventory scripts, redirect mapping templates, and monitoring plans for different migration scenarios.
+- **Google Search Central: [Redirects and Google Search](https://developers.google.com/search/docs/crawling-indexing/301-redirects):** Implementation examples for Apache, Nginx, and PHP. Explains how different redirect methods affect Google's processing.
+- **Chrome for Developers: [Avoid multiple page redirects](https://developer.chrome.com/docs/lighthouse/performance/redirects):** Performance testing methodology for redirect chains and stack-specific fixes.
+- **RedirHub: [Migration Checklists](https://github.com/redirhub/migration-checklists):** Testing checklists with URL inventory scripts, redirect mapping templates, and monitoring plans for different migration scenarios.
 
 ---
 
