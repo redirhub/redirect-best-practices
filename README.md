@@ -1,6 +1,6 @@
 # Redirect Best Practices
 
-> A curated guide to doing redirects right: choosing the right type, avoiding SEO damage, keeping things fast, staying secure, and verifying your work.
+> A guide to redirect types, SEO, performance, security, and testing.
 
 ---
 
@@ -30,9 +30,9 @@ Not all redirects are created equal. Picking the wrong one can cost you rankings
 
 ### Key Resources
 
-- **Google Search Central: [Redirects and Google Search](https://developers.google.com/search/docs/crawling-indexing/301-redirects):** The definitive guide on how Google interprets each redirect type. Covers server-side redirects, meta refresh, JavaScript redirects, and crypto redirects with implementation examples for Apache, Nginx, and PHP.
-- **MDN Web Docs: [Redirections in HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Redirections):** A complete reference for HTTP redirect status codes. Covers permanent, temporary, and special redirects, plus HTML meta refresh and JavaScript alternatives, with clear precedence rules.
-- **Ahrefs: [11 Types of Redirects & Their SEO Impact](https://ahrefs.com/blog/redirects-for-seo/):** Practical breakdown of every redirect type with real examples. Explains how Google treats each one for canonicalization and links, plus how to verify Google is honoring your redirects in Search Console.
+- **Google Search Central: [Redirects and Google Search](https://developers.google.com/search/docs/crawling-indexing/301-redirects):** Guide to how Google interprets common redirect types. Covers server-side redirects, meta refresh, JavaScript redirects, and other client-side redirect methods, with implementation examples for Apache, Nginx, and PHP.
+- **MDN Web Docs: [Redirections in HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Redirections):** Reference for HTTP redirect status codes. Covers permanent, temporary, and special redirects, plus HTML meta refresh and JavaScript alternatives, with precedence rules.
+- **Ahrefs: [11 Types of Redirects & Their SEO Impact](https://ahrefs.com/blog/redirects-for-seo/):** Practical breakdown of common redirect types with examples. Explains how Google treats each one for canonicalization and links, plus how to verify redirect behavior in Search Console.
 
 ### The Rule of Thumb
 
@@ -44,7 +44,7 @@ Google treats 301 as a strong canonicalization signal: link equity consolidates 
 
 ## SEO Best Practices
 
-Redirects are one of the most powerful SEO tools you have, and also one of the easiest to mess up. The difference between a clean migration and a traffic disaster usually comes down to how you handle redirects.
+Redirects can affect indexing, canonicalization, and traffic during migrations. Mistakes can lead to ranking and crawl issues.
 
 ### 1. Redirect to the Most Relevant Page
 
@@ -75,7 +75,7 @@ Keep an eye on the Index Coverage report for spikes in 404s, soft 404s, or redir
 
 ### Key Resources
 
-- **Google Search Central: [Redirects and Google Search](https://developers.google.com/search/docs/crawling-indexing/301-redirects):** The canonical reference for how Google processes redirects. Explains permanent vs temporary, server-side vs client-side, and how each redirect type affects indexing and canonicalization.
+- **Google Search Central: [Redirects and Google Search](https://developers.google.com/search/docs/crawling-indexing/301-redirects):** Reference for how Google processes redirects. Explains permanent and temporary redirects, server-side and client-side methods, and implementation examples for Apache, Nginx, and PHP.
 - **Ahrefs: [11 Types of Redirects & Their SEO Impact](https://ahrefs.com/blog/redirects-for-seo/):** Covers how to verify Google is consolidating link signals correctly using Search Console's external links report, plus a diagnostic method for detecting when redirects are treated as soft 404s.
 - **RedirHub: [Migration Checklists](https://github.com/redirhub/migration-checklists):** Step-by-step checklists for domain migrations, platform rebrands, HTTPS migrations, and M&A scenarios. Covers pre-launch planning, redirect mapping, and post-launch monitoring.
 
@@ -87,7 +87,7 @@ Redirects add latency. A single redirect can add 200-500ms. A chain of three red
 
 ### Redirect at the Edge
 
-The fastest redirect is the one that never reaches your origin server. Processing redirects at the CDN or edge layer eliminates the round trip to your backend.
+Processing redirects at the CDN or edge layer can reduce origin load and latency.
 
 **Where to process redirects, from fastest to slowest:**
 
@@ -130,7 +130,7 @@ A user sees `yoursite.com` in the link and trusts it, but lands on `evil-site.co
 
 ### Key Resources
 
-- **OWASP: [Unvalidated Redirects and Forwards Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html):** The definitive security reference. Covers dangerous patterns in Java, PHP, ASP.NET, Rails, and Rust, plus detailed prevention strategies including URL validation, token-based redirect mapping, and interstitial pages.
+- **OWASP: [Unvalidated Redirects and Forwards Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html):** Security reference covering dangerous patterns in Java, PHP, ASP.NET, Rails, and Rust, plus prevention strategies including URL validation, token-based redirect mapping, and interstitial pages.
 - **OWASP: [Server-Side Request Forgery Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html):** URL validation techniques that apply to redirect security. Covers DNS resolution checks, allowlist approaches, and network-layer controls.
 
 ---
